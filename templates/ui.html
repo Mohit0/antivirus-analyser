@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/ui.css') }}">
+    <script src="{{ url_for('static',filename='js/ui.js') }}"></script>
+</head>
+<body>
+    <div class="form-box">
+        <h2>Scan malicious Files </h2>
+        <form action="/scan" method="post" target="_blank" enctype="multipart/form-data">
+            <div class="input-box">
+                <label for="mal_file"></label>
+                <input type="file" name="file" id="mal_file"/>
+            </div>
+                <input type="submit" value="Upload">
+        </form>
+    </div>
+</body>
+</html>
