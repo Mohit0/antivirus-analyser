@@ -1,10 +1,10 @@
 # Antivirus-Analyser
 Installation: 
 1. Install dependencies:
-<br />Run ```pip install -r requirements.txt```
+<br />Run ```$ pip install -r requirements.txt```
 2. Add your yara rules to ***public/*** folder. 
 3. Compile all added rules.
-<br />Run ```python compile_rules.py```
+<br />Run ```$ python compile_rules.py```
 >**Note: This is a required to to initialize project for first time or whenever new rules are added.**
 <br />References for yara rules:
 <br />1. https://github.com/InQuest/awesome-yara
@@ -22,7 +22,10 @@ Installation:
 
 
 ### To Scan via Web App
-1. Run ```python api_flask_app.py```
-
+1. Run ```$ python api_flask_app.py```
+<br />OR 
+<br />**Create docker container:** 
+<br />```$ docker build .```
+<br />```$ docker run -it -p 5000:5000 <image>```
 <img src='https://user-images.githubusercontent.com/17490996/235293344-dc0422f3-10d0-4bd4-85fb-41b010e3bf05.png' width=700 height=200>
 <img src='https://user-images.githubusercontent.com/17490996/235293372-8292f50d-55ec-4e6d-a043-3f8262bbc7c9.png' width=700 height=400>
