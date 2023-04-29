@@ -15,6 +15,12 @@ Installation:
 ### To Scan files in AWS S3
 1. Add your aws creds to ***~/.aws/credentials*** file. (Default credentials will be used in script)
 2. Add your **bucket_name** and **remote_file name** in **aws_manager.py** file 
+> You can also create lamdba_functions to directly run aws_manager to scan files whenever uploaded to the bucket
 3. Run ```python aws_manager.py```
+4. Scanned files will be added a tag in S3 to confirm results. 
+![image](https://user-images.githubusercontent.com/17490996/235293213-6f650644-9235-40ea-85ef-02771424b789.png)
+
+
 
 ### To Scan via Web App
+<img src='' width=700 height=400>
