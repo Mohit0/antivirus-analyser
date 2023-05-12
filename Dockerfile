@@ -1,5 +1,5 @@
 FROM alpine
- 
+
 WORKDIR /usr/local/av-project
 
 ADD . .
@@ -13,5 +13,4 @@ ENV FLASK_ENV=development
 
 EXPOSE 5000
 
-CMD [ "python","compile_rules.py"]
 CMD [ "python","api_flask_app.py"]
