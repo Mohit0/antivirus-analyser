@@ -18,3 +18,15 @@ def one_by_one(file_path):
             except Exception as e:
                 print(e)
     return "Clean"
+
+
+def scan_bulk_files():
+    print("Scanning all files in payload folder.")
+    files = os.listdir("payloads")
+    for filename in files:
+        path = str(os.path.join("payloads", filename))
+        if str(one_by_one(path)) == "Clean":
+            print(path)
+
+
+# scan_bulk_files()

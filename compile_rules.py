@@ -39,4 +39,4 @@ def compile_rules() -> None:
             rules.save(str(dir) + ".bin")
 
 
-compile_rules()
+# compile_rules()
