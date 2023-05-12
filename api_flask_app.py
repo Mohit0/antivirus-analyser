@@ -1,10 +1,11 @@
 from flask import Flask, make_response, request, render_template, url_for
 import os
 from main import one_by_one
+from compile_rules import compile_rules
 
 app = Flask(__name__)
 
-app.config['SECRET_KEY'] = 'your secret key'
+app.config['SECRET_KEY'] = '6Ed2)2Ou,0T?DB+'
 
 
 # landing page for application
@@ -25,6 +26,11 @@ def scan_file():
     size = os.path.getsize(path)
     if size > 20000000:
         print("File is greater than 20MB")
+        os.remove(path)
+        return make_response(
+            'File Size Exceeds than 20MB.',
+            200
+        )
 
     # scan the file and get the results
     result = one_by_one(path)
@@ -54,4 +60,5 @@ def scan_file():
 
 
 if __name__ == "__main__":
-    app.run(host ='0.0.0.0', port = 5000, debug = True)
+    compile_rules()
+    app.run(host ='0.0.0.0', port=5000, debug=False)
